@@ -1,0 +1,18 @@
+<h1 align = "center">{{ title }}</h1>
+<div class="todoListInput">
+  <add-todo-modal></add-todo-modal>
+</div>
+<div class="todoLanes row">
+    <div class="todoLane leftLane col-md-4">
+        <h3>Todo</h3>
+        <app-list-of-todo-items [todos]="todoItems"></app-list-of-todo-items>
+    </div>
+    <div class="todoLane middleLane col-md-4">
+        <h3>Doing</h3>
+        <app-list-of-todo-items [todos]="doingItems"></app-list-of-todo-items>
+    </div>
+    <div class="todoLane rightLane col-md-4">
+        <h3>Done</h3>
+        <app-list-of-todo-items [todos]="doneItems"></app-list-of-todo-items>
+    </div>
+</div>

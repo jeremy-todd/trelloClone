@@ -1,0 +1,37 @@
+<ng-template #content let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Update Todo Item</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="newTodoItemTitle">Title</label>
+              <div class="input-group">
+                <div class="input-group-append">
+                    <input id="todoItemTitle" class="form-control" placeholder="Todo Title" [(ngModel)]="todoTitle" name="updateTodoItemTitle">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+                <label for="newTodoItemDetails">Details</label>
+                <div class="input-group">
+                    <div class="input-group-append">
+                        <input id="todoItemDetails" class="form-control" placeholder="Todo Details" [(ngModel)]="todoDetails" name="updateTodoItemDetails">
+                    </div>
+                </div>
+                </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success btn-sm" (click)="yesUpdateTodo()">Update Item</button>
+          <button type="button" class="btn btn-danger btn-sm" (click)="modal.close('Save click')">Cancel</button>
+        </div>
+      </ng-template>
+      
+      <button class="btn btn-link btn-sm" (click)="open(content)"><i class="far fa-edit"></i></button>
+      
+      
+      <!-- <pre>{{closeResult}}</pre> -->
