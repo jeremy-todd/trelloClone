@@ -1,9 +1,9 @@
 <div class="card" style="width: 20rem;">
-    <h5 class="card-header">
+    <h5 class="card-header" [ngClass]="{'done':todo.isDone, 'doing':todo.isDoing}" >
       {{ todo.title }} <update-todo-modal [todo]="todo"></update-todo-modal>
     </h5>
     <div class="card-block">
-      <p class="card-text" style="margin: 5px;">{{ todo.details }}</p>
+      <p class="card-text" style="margin: 5px;"  [ngClass]="{'done':todo.isDone, 'doing':todo.isDoing}">{{ todo.details }}</p>
       <div class="btn-row">
           <button type="button" (click)=setTodo() class="btn btn-secondary btn-sm" *ngIf="todo.isDoing || todo.isDone">Todo</button>
           <button type="button" (click)=setDoing() class="btn btn-warning btn-sm" *ngIf="!todo.isDoing">Doing</button>

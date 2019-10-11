@@ -11,7 +11,9 @@ export class TodoComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.todo);
+  }
 
   //Set a todo item as Doing
   setDoing() {

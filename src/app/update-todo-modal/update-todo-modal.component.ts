@@ -14,20 +14,10 @@ export class UpdateTodoModalComponent implements OnInit {
 
   closeResult: string;
   modalRef: NgbModalRef;
-  todoTitle: string = this.todo.title;
-  todoDetails: string =this.todo.details;
 
   constructor(private modalService: NgbModal, private todoService: TodoService) {}
 
   yesUpdateTodo() {
-    this.todoService.updateTodoItem({
-      id: this.todo.id,
-      isDoing: this.todo.isDoing,
-      isEditing: this.todo.isEditing,
-      isDone: this.todo.isDone,
-      title: this.todoTitle,
-      details: this.todoDetails,
-    });
     this.modalRef.close();
   }
 

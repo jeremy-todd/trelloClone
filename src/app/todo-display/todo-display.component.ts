@@ -8,6 +8,7 @@ import { TodoService } from '../services/todo.service';
   styleUrls: ['./todo-display.component.scss']
 })
 export class TodoDisplayComponent implements OnInit {
+  title = "Todo List";
   
   constructor(private todoService: TodoService) { }
 

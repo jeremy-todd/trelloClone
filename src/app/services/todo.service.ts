@@ -78,7 +78,15 @@ export class TodoService {
   
   //Add a todo item
   addTodoItem(todo: ITodo): void {
-    this.todoList.push(todo);
+    const newId = this.todoList.map(x => x.id).reduce((prev, curr) => (prev < curr ? curr : prev)) + 1;
+    this.todoList.push({
+      id: newId,
+      title: todo.title,
+      details: todo.details,
+      isDoing: false,
+      isDone: false,
+      isEditing: false
+    });
   }
 
   //Update a todo item
