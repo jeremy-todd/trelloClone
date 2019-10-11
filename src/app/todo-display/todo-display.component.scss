@@ -1,0 +1,31 @@
+.todoListInput {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.todoLanes {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.todoLane {
+    margin: 0 auto;
+}
+
+.middleLane {
+    border-style: solid;
+    border-color: #e3e3e3;
+    border-width: 0px 1px 0px 1px; 
+}
+
+.rightLane {
+    border-style: solid;
+    border-color: #e3e3e3;
+    border-width: 0px 0px 0px 1px;
+}
+
+.leftLane {
+    border-style: solid;
+    border-color: #e3e3e3;
+    border-width: 0px 1px 0px 0px;
+}
